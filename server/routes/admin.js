@@ -58,26 +58,26 @@ router.post("/register", async (req, res) => {
 });
 
 //Routes post login
-router.post("/admin", async (req, res) => {
-  try {
-    const { username, password } = req.body;
-    const user = await User.findOne({ username });
-    if (!user) {
-      return res.status(401).json({ message: "invalid credentials" });
-    } else {
-      const isPasswordValid = await bcrypt.compare(password, user.password);
-      if (!isPasswordValid) {
-        return res.status(401).json({ message: "invalid credentials" });
-      }
-      const token = jwt.sign({ userId: user._id }, jwtSecret);
-      res.cookie("token", token, { httpOnly: true });
+// router.post("/admin", async (req, res) => {
+//   try {
+//     const { username, password } = req.body;
+//     const user = await User.findOne({ username });
+//     if (!user) {
+//       return res.status(401).json({ message: "invalid credentials" });
+//     } else {
+//       const isPasswordValid = await bcrypt.compare(password, user.password);
+//       if (!isPasswordValid) {
+//         return res.status(401).json({ message: "invalid credentials" });
+//       }
+//       const token = jwt.sign({ userId: user._id }, jwtSecret);
+//       res.cookie("token", token, { httpOnly: true });
 
-      res.redirect("/dashboard");
-    }
-  } catch (err) {
-    console.log(err);
-  }
-});
+//       res.redirect("/dashboard");
+//     }
+//   } catch (err) {
+//     console.log(err);
+//   }
+// });
 
 //Routes get Admin dashboard
 router.get("/dashboard", authMiddleWare, async (req, res) => {
