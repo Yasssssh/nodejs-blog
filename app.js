@@ -40,5 +40,5 @@ app.use("/", require("./server/routes/main.js"));
 app.use("/", require("./server/routes/admin.js"));
 
 app.listen(3000 || process.env.PORT, () => {
-  console.log(`listening on port ${PORT}`);
+  console.log(`listening on port `, process.env.PORT);
 });
