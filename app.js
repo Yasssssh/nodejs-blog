@@ -11,7 +11,7 @@ const session = require("express-session");
 const {isActiveRoute} = require("./server/helpers/routeHelpers");
 
 const app = express();
-const PORT = 3000 || process.env.PORT;
+const PORT = 3000;
 
 //connect to db
 connectDB();
