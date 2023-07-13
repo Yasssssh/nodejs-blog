@@ -10,7 +10,6 @@ const MongoStore = require("connect-mongo");
 const session = require("express-session");
 
 const app = express();
-const PORT = 3000 || process.env.PORT;
 
 //connect to db
 connectDB();
@@ -40,6 +39,6 @@ app.set("view engine", "ejs");
 app.use("/", require("./server/routes/main.js"));
 app.use("/", require("./server/routes/admin.js"));
 
-app.listen(PORT, () => {
+app.listen(3000 || process.env.PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
