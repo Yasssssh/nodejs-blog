@@ -329,3 +329,61 @@ footer {
   justify-content: space-between;
   padding: 10px 0;
 }
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-box {
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.contact-box ul li {
+  margin: 20px;
+}
+
+.contact-box ul li a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.contact-box ul li a i {
+  margin-right: 10px;
+  color: white;
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+.contact-box ul li a:hover {
+  color: #ffffff80;
+}
+
+.contact-box ul li a:hover i {
+  color: #ffffff80;
+}
