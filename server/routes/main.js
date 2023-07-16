@@ -6,8 +6,9 @@ const Post = require("../models/post");
 router.get("/", async (req, res) => {
   try {
     const locals = {
-      title: "Nodejs Blog",
-      description: "Simple blog created with nodejs",
+      title: "Flash News",
+      description:
+        "Quick and Short news articles for you to read so you can save time!",
     };
     let perPage = 10;
     let page = req.query.page || 1;
@@ -39,7 +40,8 @@ router.get("/post/:id", async (req, res) => {
     const data = await Post.findById({ _id: slug });
     const locals = {
       title: data.title,
-      description: "Simple blog created with nodejs, express and mongodb",
+      description:
+        "Quick and Short news articles for you to read so you can save time!, express and mongodb",
     };
     res.render("post", { locals, data, currentRoute: `/post/${slug}` });
   } catch (err) {
@@ -52,7 +54,8 @@ router.post("/search", async (req, res) => {
   try {
     const locals = {
       title: "Search",
-      description: "Simple blog created with nodejs, express and mongodb",
+      description:
+        "Quick and Short news articles for you to read so you can save time!, express and mongodb",
     };
     let searchTerm = req.body.searchTerm;
     let searchnoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9]/g, "");

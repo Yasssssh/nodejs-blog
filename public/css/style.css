@@ -387,3 +387,7 @@ footer {
 .contact-box ul li a:hover i {
   color: #ffffff80;
 }
+
+.footer__main span {
+  margin: 10px;
+}

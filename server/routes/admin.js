@@ -30,7 +30,8 @@ router.get("/admin", async (req, res) => {
   try {
     const locals = {
       title: "Admin",
-      description: "Simple Blog created with Nodejs, Express and MongoDB",
+      description:
+        "Quick and Short news articles for you to read so you can save time!, Express and MongoDB",
     };
     res.render("admin/adminindex", { locals, layout: adminLayout });
   } catch (err) {
@@ -84,7 +85,8 @@ router.get("/dashboard", authMiddleWare, async (req, res) => {
   try {
     const locals = {
       title: "Dashboard",
-      description: "Simple Blog created with Nodejs, Express and MongoDB",
+      description:
+        "Quick and Short news articles for you to read so you can save time!, Express and MongoDB",
     };
     const data = await Post.find();
     res.render("admin/dashboard", {
@@ -102,7 +104,8 @@ router.get("/add-post", authMiddleWare, async (req, res) => {
   try {
     const locals = {
       title: "Add Post",
-      description: "Simple Blog created with Nodejs, Express and MongoDB",
+      description:
+        "Quick and Short news articles for you to read so you can save time!, Express and MongoDB",
     };
     const data = await Post.find();
     res.render("admin/add-post", {
