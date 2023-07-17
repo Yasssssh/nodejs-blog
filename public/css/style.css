@@ -105,6 +105,10 @@ img {
     grid-template-columns: auto 1fr auto;
     grid-template-areas: "logo menu button";
   }
+  .article{
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 .header__logo {
