@@ -106,8 +106,14 @@ img {
     grid-template-areas: "logo menu button";
   }
   .article{
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    flex-direction: column;
+  }
+  .artimg{
+    flex: 0 0 100%;
+  }
+  .artbody{
+    flex:2
   }
 }
 
