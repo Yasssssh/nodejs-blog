@@ -350,3 +350,89 @@ footer div {
 .pagination:hover {
   color: var(--black);
 }
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box {
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  text-align: center;
+}
+
+.contact-box ul li {
+  margin: 0;
+}
+
+.contact-box ul li a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.contact-box ul li a i {
+  margin-right: 10px;
+  color: white;
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+.contact-box ul li a:hover {
+  color: #ffffff80;
+}
+
+.contact-box ul li a:hover i {
+  color: #ffffff80;
+}
+
+.footer__main div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
+  margin: 0 10rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo menu button";
+  }
+  .article {
+    white-space: pre-wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .artimg {
+    margin: auto;
+    overflow: hidden;
+    max-height: 1000px;
+    border-radius: 1rem;
+  }
+  .artbody {
+    margin: auto;
+    text-align: justify;
+  }
+}
